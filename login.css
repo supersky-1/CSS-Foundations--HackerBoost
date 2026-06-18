@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(to right,rgb(199,198,241)50%, rgb(135,122,214)100% );
+    margin: 0;
+}
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    color: black;
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(
+        to bottom right,
+        rgb(91, 80, 166) 0%,
+        rgb(132, 125, 194) 50%,
+        rgb(174, 169, 226) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 380px;
+    height: 600px;
+    color: rgb(71, 2, 136);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20vh;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    z-index: 1;
+    clip-path: path("M 0 0 L 95 0 L 280 205 Q 345 265 280 325 L 0 600 Z");
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 170px;
+    bottom: -100px;
+    width: 170px;
+    height: 800px;
+    background: rgba(75, 64, 160, 0.45);
+
+    transform: rotate(45deg);
+}
+
+.name{
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    margin-left: 20px;
+}
+.password{
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+button{
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    color: rgb(71, 2, 136);
+    font-weight: bold;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+.options{
+    position: relative;
+    z-index: 2;
+    left: 250px;
+    right: 30px;
+    bottom: 30px;
+    top: 50px;
+    color: white;
+    font-size: 20px;
+}
+img{
+    filter: invert(1);
+}
+.logos{
+    margin: 0;
+    display: flex;
+    gap: 5px;
+}
+input{
+    border: none;
+    border-top: 1px solid rgba(75, 64, 160, 0.45);
+}
