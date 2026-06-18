@@ -28,7 +28,7 @@ body {
     color: rgb(71, 2, 136);
     border-radius: 20px;
     padding: 10px;
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
 }
 .card::after {
     content: "";
@@ -55,14 +55,19 @@ body {
 .name{
     position: relative;
     z-index: 2;
-    padding: 20px;
     margin-left: 20px;
+    margin-top: 40px;
 }
 .password{
     position: relative;
     z-index: 2;
-    padding: 20px;
     margin-left: 20px;
+    margin-top: 20px;
+
+}
+.name img,
+.password img{
+     filter: invert(28%) sepia(40%) saturate(1500%) hue-rotate(230deg);
 }
 
 button{
@@ -73,8 +78,12 @@ button{
     height: 50px;
     color: rgb(71, 2, 136);
     font-weight: bold;
+    margin-top: 40px;
     margin-left: 20px;
     border-radius: 20px;
+}
+button:hover{
+    transform: scale(1.01);
 }
 .options{
     position: relative;
@@ -86,8 +95,11 @@ button{
     color: white;
     font-size: 20px;
 }
-img{
+.logos img{
     filter: invert(1);
+}
+.logos img:hover{
+    transform: scale(1.04);
 }
 .logos{
     margin: 0;
@@ -95,6 +107,11 @@ img{
     gap: 5px;
 }
 input{
+    height: 20px;
     border: none;
     border-top: 1px solid rgba(75, 64, 160, 0.45);
+}
+input:focus{
+    border-color: rgba(75, 64, 160, 0.45);
+    outline: none;
 }
