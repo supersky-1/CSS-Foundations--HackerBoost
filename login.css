@@ -1,6 +1,10 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     background: linear-gradient(to right,rgb(199,198,241)50%, rgb(135,122,214)100% );
-    margin: 0;
 }
 .page {
     min-height: 100vh;
@@ -12,13 +16,13 @@ body {
     position: relative;
     overflow: hidden;
     color: black;
-    width: 400px;
+    width: 350px;
     height: 500px;
     background: linear-gradient(
         to bottom right,
-        rgb(91, 80, 166) 0%,
-        rgb(132, 125, 194) 50%,
-        rgb(174, 169, 226) 100%
+        rgb(108, 100, 172) 0%,
+        rgb(101, 94, 170) 50%,
+        rgb(195, 177, 247) 100%
     );
     display: flex;
     flex-direction: column;
@@ -36,19 +40,26 @@ body {
     inset: 0;
     background: white;
     z-index: 1;
-    clip-path: path("M 0 0 L 95 0 L 280 205 Q 345 265 280 325 L 0 600 Z");
+    top: 0px;
+    right: -80px;
+    left: -250px;
+    width: 400px;
+    height: 600px;
+    border-radius: 0 15% 0% 0;
+    transform: rotate(45deg);
 }
 
 .card::before {
     content: "";
     position: absolute;
     z-index: 0;
-    left: 170px;
+    left: 150px;
     bottom: -100px;
+    top: 20px;
     width: 170px;
-    height: 800px;
-    background: rgba(75, 64, 160, 0.45);
-
+    height: 500px;
+    background:linear-gradient(to right, rgb(95, 87, 163) 50%, rgb(104,100,159)100%);
+    border-radius: 0 20px 20px 0;
     transform: rotate(45deg);
 }
 
@@ -74,17 +85,30 @@ button{
     position: relative;
     z-index: 2;
     padding: 10px;
-    width: 200px;
+    gap: 80px;
+    width: 240px;
     height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    justify-content: space-around;
     color: rgb(71, 2, 136);
     font-weight: bold;
     margin-top: 40px;
     margin-left: 20px;
+    border: rgb(71, 2, 136);
     border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+button img{
+     filter: invert(28%) sepia(40%) saturate(1500%) hue-rotate(230deg);
+
 }
 button:hover{
     transform: scale(1.01);
 }
+
 .options{
     position: relative;
     z-index: 2;
@@ -104,7 +128,7 @@ button:hover{
 .logos{
     margin: 0;
     display: flex;
-    gap: 5px;
+    gap: 9px;
 }
 input{
     height: 20px;
@@ -114,4 +138,7 @@ input{
 input:focus{
     border-color: rgba(75, 64, 160, 0.45);
     outline: none;
+}
+input:hover{
+    transform: scale(1.05);
 }
