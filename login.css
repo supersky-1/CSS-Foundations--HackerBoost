@@ -76,6 +76,14 @@ body {
     margin-top: 20px;
 
 }
+.remember-me{
+    position: relative;
+    z-index: 2;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: rgb(63, 60, 65);
+    display: flex;
+}
 .name img,
 .password img{
     
